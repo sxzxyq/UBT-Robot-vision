@@ -60,3 +60,8 @@ cd image_ws
 colcon build --symlink-install
 source install/setup.bash
 ```
+
+## 运行
+*   1.启动机器人的相机节点
+*   2.激活虚拟环境
+*   3.执行一键启动脚本
