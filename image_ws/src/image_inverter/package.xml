@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>image_inverter</name>
+  <version>0.0.1</version>
+  <description>A ROS 2 node for helmet detection, segmentation, and tracking using VLM, SAM2, and CUTIE.</description>
+  <maintainer email="nvidia@todo.todo">nvidia</maintainer>
+  <license>TODO: License declaration</license>
+
+  <!-- 声明这是一个纯Python包 -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- 核心ROS依赖 -->
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>message_filters</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_sensor_msgs</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <!-- 
+    系统级Python依赖
+    rosdep可以解析这些并使用apt安装 
+  -->
+  <depend>python3-opencv</depend>
+  <depend>python3-numpy</depend>
+  <depend>python3-pil</depend> <!-- Pillow -->
+
+  <!-- 
+    通过pip安装的复杂Python依赖 (AI/ML库)
+    使用<depend>通用标签来声明这些运行时需求。
+    rosdep可能无法自动安装它们，需要用户手动通过pip在虚拟环境中安装。
+    在这里声明它们，是为了让依赖关系清晰明确。
+  -->
+  <depend>python3-torch</depend>
+  <depend>python3-torchvision</depend>
+  <depend>python3-transformers</depend>
+  <depend>python3-hydra-core</depend>
+  <depend>python3-openai</depend>
+  <depend>python3-json-repair</depend>
+  
+  <!-- 测试依赖 -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

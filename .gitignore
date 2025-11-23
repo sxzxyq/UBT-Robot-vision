@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+.venv/
+venv/
+
+# VS Code
+.vscode/
+
+# ROS 2 Build files (非常重要)
+build/
+install/
+log/
+
+# Jetson / OS specific
+*.swp
+.DS_Store

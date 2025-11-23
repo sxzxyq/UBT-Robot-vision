@@ -1,0 +1,11 @@
+# 文件路径: ~/Workspace/image_ws/src/image_inverter/srv/TriggerVerification.srv
+
+# --- 请求部分 ---
+# 我们可以发送一个布尔值作为触发信号，或者甚至让它为空。
+# 为空表示“调用这个服务本身就是触发信号”。我们让它为空，以示简洁。
+
+---
+# --- 响应部分 ---
+# 服务端处理完成后，将返回一个布尔值结果。
+bool is_compliant    # True表示已佩戴安全帽, False表示未佩戴
+string message       # 可以附加一些额外信息，比如 "Verification successful."

@@ -1,0 +1,11 @@
+# --- 请求部分 ---
+# 客户端发送一个具体的、用于计数的提示词。
+# 例如: "How many construction workers are in the image? Answer with a number only."
+string prompt
+
+---
+# --- 响应部分 ---
+# 服务端返回是否成功、计数值和一条消息。
+bool success      # True表示处理成功, False表示有错误发生
+int32 count       # 检测到的物体数量。如果失败，可以设为-1。
+string message    # 附加信息, 例如 "Counted 3 workers." 或 "Error: VLM request failed."

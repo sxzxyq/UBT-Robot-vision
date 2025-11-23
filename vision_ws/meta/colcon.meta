@@ -1,0 +1,19 @@
+{
+    "build": {
+        "mixin": [
+            "conda-python"
+        ]
+    },
+    "mixin": {
+        "conda-python": {
+            "build": {
+                "cmake-args": [
+                    "-DPython3_EXECUTABLE:FILEPATH=${CONDA_PREFIX}/bin/python"
+                ]
+            },
+            "run": {
+                "ament-python-executable": "${CONDA_PREFIX}/bin/python"
+            }
+        }
+    }
+}

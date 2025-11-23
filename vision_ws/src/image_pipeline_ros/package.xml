@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <!-- 包名，必须与文件夹名一致 -->
+  <name>image_pipeline_ros</name>
+
+  <!-- 版本号，可以从 0.0.1 开始 -->
+  <version>0.0.1</version>
+  
+  <!-- 包的功能描述，简洁明了即可 -->
+  <description>一个集成了VLM, SAM, CUTIE的ROS 2图像处理与跟踪节点。</description>
+  
+  <!-- 维护者信息 -->
+  <maintainer email="kai.yang@x-humanoid.com">nvidia</maintainer>
+
+  <!-- 许可证，例如 Apache-2.0, MIT, BSD-3-Clause -->
+  <license>Apache-2.0</license>
+
+  <!-- 明确声明这是一个 ament_python 类型的包 -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- 
+    执行依赖 (exec_depend):
+    这些是运行您的Python节点时所必需的ROS 2包。
+  -->
+  <exec_depend>rclpy</exec_depend>         <!-- ROS 2 Python客户端库 -->
+  <exec_depend>sensor_msgs</exec_depend>   <!-- 用于处理图像消息 (sensor_msgs/msg/Image) -->
+  <exec_depend>std_msgs</exec_depend>     <!-- 用于处理基本消息类型 (std_msgs/msg/String) -->
+  <exec_depend>std_srvs</exec_depend>     <!-- 用于处理基本的服务类型 (std_srvs/srv/Trigger) -->
+  <exec_depend>cv_bridge</exec_depend>    <!-- 用于在ROS图像和OpenCV图像之间转换 -->
+  
+  <exec_depend>sam2</exec_depend>
+  <exec_depend>cutie</exec_depend>
+  <exec_depend>image_pipeline_lib</exec_depend>
+  <!-- 
+    测试依赖 (test_depend):
+    这些是运行代码质量测试时需要的包，保持默认即可。
+  -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <!-- 导出信息，声明构建类型 -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
